@@ -2,7 +2,7 @@ const { useSelector, useDispatch } = require('react-redux');
 const { selectUser } = require('redux/user/userSelect');
 const { logoutThunk } = require('redux/user/userThunk');
 
-export const InfoUser = () => {
+export const userMenu = () => {
   const user = useSelector(selectUser);
   const dispatch = useDispatch();
   const handleSubmit = () => {
