@@ -1,8 +1,8 @@
-const { useSelector, useDispatch } = require('react-redux');
-const { selectUser } = require('redux/user/userSelect');
-const { logoutThunk } = require('redux/user/userThunk');
+import { useSelector, useDispatch } from 'react-redux';
+import { selectUser } from '../../redux/user/userSelectors';
+import { logoutThunk }from '../../redux/user/userThunk';
 
-export const userMenu = () => {
+export const UserMenu = () => {
   const user = useSelector(selectUser);
   const dispatch = useDispatch();
   const handleSubmit = () => {
