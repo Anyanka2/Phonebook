@@ -31,7 +31,7 @@ export const RegistrationForm = () => {
         Password
         <input type="password" name="password" />
       </label>
-      <button type="submit">Register</button>
+      <button type="submit">SignUp</button>
     </form>
   );
 };

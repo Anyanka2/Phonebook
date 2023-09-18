@@ -6,7 +6,7 @@ const { useEffect } = require('react');
 const { useDispatch } = require('react-redux');
 const { getContactsThunk } = require('redux/contactsThunk');
 
-export const Contacts = () => {
+const Contacts = () => {
   const dispatch = useDispatch();
   
   useEffect(() => {
@@ -22,3 +22,4 @@ export const Contacts = () => {
     </div>
   );
 };
+export default Contacts;

@@ -10,13 +10,12 @@
 // import { selectContacts, selectIsLoading, selectError } from 'redux/selectors';
 //import { refreshUserThunk } from 'redux/user/userThunk';
 
-
 import { useEffect, lazy } from 'react';
 import { useDispatch } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
-import { Layout } from '../components/Layout/Layout';
-import { PrivateRoute } from 'components/PrivateRoute/PrivateRoute';
-import { PublicRoute } from 'components/PublicRoute/PublicRoute';
+import { Layout } from 'components/Layout/Layout';
+import { PrivateRoute } from 'components/PrivateRoute';
+import { PublicRoute } from 'components/PublicRoute';
 import { refreshUserThunk } from '../redux/user/userThunk';
 import { useAuth } from '../hooks/useAuth';
 
@@ -40,16 +39,14 @@ export const App = () => {
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route
-          path="/register"
+          path="/signup"
           element={
             <PublicRoute redirectTo="/contacts" component={<SignUp />} />
           }
         />
         <Route
           path="/login"
-          element={
-            <PublicRoute redirectTo="/contacts" component={<Login />} />
-          }
+          element={<PublicRoute redirectTo="/contacts" component={<Login />} />}
         />
         <Route
           path="/contacts"
@@ -57,7 +54,7 @@ export const App = () => {
             <PrivateRoute redirectTo="/login" component={<Contacts />} />
           }
         />
-      </Route>
+      </Route> 
     </Routes>
   );
 };
