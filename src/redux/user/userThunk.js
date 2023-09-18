@@ -1,10 +1,10 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import {
-    currentUser,
-    loginUser,
-    logoutUser,
-    signUpUser,
-    token
+  currentUser,
+  loginUser,
+  logoutUser,
+  signUpUser,
+  token,
 } from 'services/userApi';
 
 export const signUpThunk = createAsyncThunk(
