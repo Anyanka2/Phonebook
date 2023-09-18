@@ -36,18 +36,18 @@ export const ContactForm = () => {
   const handleSubmit = event => {
     const phoneContact = {
       name: contactName,
-      phone: number,
+      number: number,
     };
     event.preventDefault();
 
     const isDuplicateContact = 
       contacts.some(
         contact => contact.name.toLowerCase() === phoneContact.name.toLowerCase() ||
-          contact.phone === phoneContact.phone
+          contact.number === phoneContact.number
       );
     if (isDuplicateContact) {
       return Notiflix.Notify.warning(
-        `Contact "${phoneContact.name}" or ${phoneContact.phone} is already in your contacts list!`
+        `Contact "${phoneContact.name}" or ${phoneContact.number} is already in your contacts list!`
       )
     } 
       dispatch(addContactsThunk(phoneContact));

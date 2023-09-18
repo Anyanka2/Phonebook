@@ -1,14 +1,16 @@
-import { Helmet } from 'react-helmet';
-import { RegistrationForm } from 'components/RegistrationForm/RegistrationForm';
+import { Helmet, HelmetProvider  } from 'react-helmet-async';
+import RegistrationForm from 'components/RegistrationForm/RegistrationForm';
 
  const SignUp = () => {
-  return (
+   return (
+    <HelmetProvider>
     <div>
       <Helmet>
         <title>Registration</title>
       </Helmet>
       <RegistrationForm />
-    </div>
+       </div>
+       </HelmetProvider>
   );
 }
 export default SignUp;

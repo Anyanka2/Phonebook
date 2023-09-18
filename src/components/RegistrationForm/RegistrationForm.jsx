@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { signUpThunk } from 'redux/user/userThunk';
 
-export const RegistrationForm = () => {
+const RegistrationForm = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = event => {
@@ -35,3 +35,4 @@ export const RegistrationForm = () => {
     </form>
   );
 };
+export default RegistrationForm;

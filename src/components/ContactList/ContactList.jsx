@@ -11,9 +11,9 @@ export const ContactList = () => {
   return (
     <>
       <List>
-        {filteredContacts.map(({ id, name, phone }) => (
+        {filteredContacts.map(({ id, name, number }) => (
           <Item key={id}>
-            {name + ' : ' + phone}
+            {name + ' : ' + number}
             {
               <Button
                 type="button"

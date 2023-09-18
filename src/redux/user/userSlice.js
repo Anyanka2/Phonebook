@@ -12,6 +12,7 @@ const initialState = {
   token: null,
   isLoading: false,
   error: null,
+  isLoggedIn: false
 };
 
 const handleIfPending = state => {
@@ -75,6 +76,7 @@ const authSlice = createSlice({
         state.user = payload.user;
         state.token = payload.token;
         state.isLoading = false;
+        state.isLoggedIn = false;
         state.error = null;
       })
       .addCase(loginThunk.pending, handleIfPending)
@@ -83,6 +85,7 @@ const authSlice = createSlice({
         state.user = payload.user;
         state.token = payload.token;
         state.isLoading = false;
+        state.isLoggedIn = true;
         state.error = null;
       })
       .addCase(logoutThunk.pending, handleIfPending)
