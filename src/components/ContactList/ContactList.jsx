@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { deleteContactsThunk } from 'redux/contactsThunk';
 import { selectFilteredContacts } from 'redux/selectors';
 
-const ContactList = () => {
+export const ContactList = () => {
   const dispatch = useDispatch();
   const filteredContacts = useSelector(selectFilteredContacts);
 
@@ -30,4 +30,3 @@ const ContactList = () => {
   );
 };
 
-export default ContactList;

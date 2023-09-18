@@ -5,7 +5,7 @@ import { selectContacts } from 'redux/selectors';
 import { getContactsThunk, addContactsThunk } from 'redux/contactsThunk';
 import Notiflix from 'notiflix';
 
-const ContactFrom = () => {
+export const ContactForm = () => {
   const dispatch = useDispatch();
   const contacts = useSelector(selectContacts);
   const [contactName, setContactName] = useState('');
@@ -86,4 +86,3 @@ const ContactFrom = () => {
   );
 };
 
-export default ContactFrom;
