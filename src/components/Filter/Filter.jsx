@@ -13,7 +13,7 @@ export function Filter() {
   return (
     <FilterCont>
       <Label>
-        Find contacts by name or phone number
+        Find contact by name or phone number
         <Input type="text" value={filter} onChange={onChange} />
       </Label>
     </FilterCont>

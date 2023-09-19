@@ -27,6 +27,7 @@ export const App = () => {
   ) : (
     <Suspense fallback={<Loader />}>
       {/* <Header/> */}
+
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
@@ -53,45 +54,3 @@ export const App = () => {
     </Suspense>
   );
 };
-// export const App = () => {
-//   const contacts = useSelector(selectContacts);
-//   const isLoading = useSelector(selectIsLoading);
-//   const error = useSelector(selectError);
-//   return (
-//     <Container>
-//       <Title>Phonebook</Title>
-//       {error && (
-//           <p>Whoops, something went wrong: {error}</p>
-//         )}
-//       <ContactFrom />
-//       <SubTitle>Contacts</SubTitle>
-//       {contacts.length > 0 && <Filter />}
-//       {!isLoading && <Loader />}
-//       <ContactList />
-//     </Container>
-//   );
-// };
-// export const App = () => {
-//   const dispatch = useDispatch();
-//   useEffect(() => {
-//     dispatch(refreshUserThunk());
-//   }, [dispatch]);
-
-//   return (
-//     <div>
-//       <Suspense>
-//         <nav>
-//         <Routes>
-//           <Route path="/" element={<PublicRoute />}>
-//             <Route path="/signup" element={<SignUp />} />
-//             <Route path="/login" element={<Login />} />
-//           </Route>
-//           <Route path="/" element={<PrivateRoute />}>
-//             <Route path="/contacts" element={<Contacts />} />
-//           </Route>
-//           </Routes>
-//           </nav>
-//       </Suspense>
-//     </div>
-//   );
-// };
