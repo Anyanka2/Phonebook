@@ -1,5 +1,9 @@
 import styled from '@emotion/styled';
 
+export const Container = styled.div`
+  display: flex;
+  justify-content: center;
+`;
 export const Info = styled.p`
   color: #000;
   font-size: 20px;
@@ -12,7 +16,9 @@ export const Form = styled.form`
   padding: 12px;
   font-weight: 500;
   background-color: #dfeff5;
-  border: 3px solid #e88606;
+  border: 1px solid #e88606;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
   border-radius: 8px;
   margin-top: 20px;
 `;
@@ -25,10 +31,10 @@ export const Input = styled.input`
   font: inherit;
   cursor: pointer;
 
-  &:focus{
-  outline: none;
-  border: 2px solid #e88606;
-  background-color: #fff;
+  &:focus {
+    outline: none;
+    border: 2px solid #e88606;
+    background-color: #fff;
   }
 `;
 export const Label = styled.label`
@@ -46,7 +52,7 @@ export const Button = styled.button`
   border: 3px solid #e88606;
   color: #e88606;
   font-size: 20px;
- 
+
   &:hover,
   &:focus {
     color: #fff;

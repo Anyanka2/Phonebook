@@ -11,12 +11,13 @@ export const FilterCont = styled.div`
 `;
 
 export const Label = styled.label`
-  color: #000;
+  color: #2a363b;
   font-size: 20px;
   font-weight: 500;
 `;
 
 export const Input = styled.input`
+  color: #2a363b;
   width: 408px;
   padding: 8px;
   margin: 15px 0;
@@ -25,8 +26,8 @@ export const Input = styled.input`
   border: 3px solid #dfeff5;
   font-size: 20px;
 
-   &:focus{
-  outline: none;
-  border: 3px solid #e88606;
+  &:focus {
+    outline: none;
+    border: 3px solid #e88606;
   }
 `;

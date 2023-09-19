@@ -1,10 +1,12 @@
-import React from "react";
+import React from 'react';
+import { Container, Title, Text } from './HomePage.styled';
 
 const HomePage = () => {
   return (
-    <div>
-      <h1>PHONEBOOK</h1>
-    </div>
+    <Container>
+      <Title>phonebook</Title>
+      <Text>all your contacts in one place</Text>
+    </Container>
   );
 };
 

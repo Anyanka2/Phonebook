@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { loginThunk } from 'redux/user/userThunk';
-import { StyledLabel, StyledForm, StyledInput, StyledButton } from "./LoginForm.styled";
+import { StyledLabel, StyledForm, StyledInput, StyledButton, Container } from "./LoginForm.styled";
 
 export const LoginForm = () => {
   const dispatch = useDispatch();
@@ -18,6 +18,7 @@ export const LoginForm = () => {
   };
 
   return (
+    <Container>
     <StyledForm onSubmit={handleSubmit} autoComplete="off">
       <StyledLabel>
         Email
@@ -28,6 +29,7 @@ export const LoginForm = () => {
         <StyledInput type="password" name="password" />
       </StyledLabel>
       <StyledButton type="submit">Log In</StyledButton>
-    </StyledForm>
+      </StyledForm>
+      </Container>
   );
 };

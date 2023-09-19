@@ -1,5 +1,10 @@
 import styled from '@emotion/styled';
 
+export const Container = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
 export const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
@@ -7,15 +12,18 @@ export const StyledForm = styled.form`
   padding: 12px;
   font-weight: 500;
   background-color: #dfeff5;
-  border: 3px solid #e88606;
   border-radius: 8px;
   margin-top: 20px;
+  border: 1px solid #e88606;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 `;
 
 export const StyledLabel = styled.label`
   display: flex;
   flex-direction: column;
   margin-bottom: 16px;
+  color: #e88606;
 `;
 export const StyledInput = styled.input`
   margin-top: 10px;

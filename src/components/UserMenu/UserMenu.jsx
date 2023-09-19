@@ -1,6 +1,8 @@
 import { useDispatch } from 'react-redux';
 import { logoutThunk } from '../../redux/user/userThunk';
 import { useAuth } from '../../hooks/useAuth';
+import { UserText } from './UserMenu.styled';
+import Button from '@mui/material/Button';
 
 export const UserMenu = () => {
   const dispatch = useDispatch();
@@ -8,33 +10,13 @@ export const UserMenu = () => {
 
   return (
     <div>
-      <p>Welcome, {user.name}</p>
-      <button type="button" onClick={() => dispatch(logoutThunk())}>
+      <UserText>Welcome, {user.name}!</UserText>
+      <Button type="button" sx={{ color: '#e88606' }}onClick={() => dispatch(logoutThunk())}>
         Logout
-      </button>
+      </Button>
     </div>
   );
 };
 
-// import { useSelector, useDispatch } from 'react-redux';
-// import { selectUser } from '../../redux/user/userSelectors';
-// import { logoutThunk }from '../../redux/user/userThunk';
 
-// export const UserMenu = () => {
-//   const user = useSelector(selectUser);
-//   const dispatch = useDispatch();
-//   const handleSubmit = () => {
-//     dispatch(logoutThunk());
-//   };
-//   return (
-//     <div>
-//       {user && (
-//           <button
-//             onClick={handleSubmit}
-//           >
-//             Log Out
-//           </button>
-//       )}
-//     </div>
-//   );
-// };
+

@@ -1,9 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import {
-  getContacts,
-  addContacts,
-  deleteContacts,
-} from 'services/contactsApi';
+import { getContacts, addContacts, deleteContacts } from 'services/contactsApi';
 import { toast } from 'react-hot-toast';
 
 export const getContactsThunk = createAsyncThunk(
@@ -36,7 +32,7 @@ export const deleteContactsThunk = createAsyncThunk(
       const data = deleteContacts(id);
       toast.success('Deleted');
       return data;
-          } catch (error) {
+    } catch (error) {
       return reject(error.message);
     }
   }

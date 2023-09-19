@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { signUpThunk } from 'redux/user/userThunk';
-import { Button, Form, Input, Label } from './RegistrationForm.Styled';
+import { Button, Form, Input, Label, Container } from './RegistrationForm.Styled';
 
 const RegistrationForm = () => {
   const dispatch = useDispatch();
@@ -19,6 +19,7 @@ const RegistrationForm = () => {
   };
 
   return (
+    <Container>
     <Form onSubmit={handleSubmit} autoComplete="off">
       <Label>
         Username
@@ -33,7 +34,8 @@ const RegistrationForm = () => {
         <Input type="password" name="password" />
       </Label>
       <Button type="submit">SignUp</Button>
-    </Form>
+      </Form>
+      </Container>
   );
 };
 export default RegistrationForm;
