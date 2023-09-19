@@ -97,7 +97,6 @@ const authSlice = createSlice({
       .addCase(refreshUserThunk.rejected, handleIfReject)
       .addCase(refreshUserThunk.fulfilled, (state, { payload }) => {
         state.user = payload;
-        state.token = payload.token;
         state.isLoggedIn = true;
         state.isLoading = false;
         state.error = null;
